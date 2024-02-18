@@ -1,0 +1,17 @@
+def equilibrium(arr):
+ 
+    total_sum = sum(arr)
+    leftsum = 0
+    for i, num in enumerate(arr):
+         
+        total_sum -= num
+         
+        if leftsum == total_sum:
+            return i
+        leftsum += num
+      
+    return -1
+     
+# Driver code
+arr = [-4, 1, 5, 2, -4, 4, 2]
+print ('Equilibrium index is ',equilibrium(arr))
